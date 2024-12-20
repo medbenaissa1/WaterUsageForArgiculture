@@ -1,0 +1,10 @@
+-----> Clear insight on goal prediction ?
+-----> Setup : Github Exception & Loggers
+1- Data Collection
+2- Data Ingestion
+3- Data Transformation
+4- Model Training
+5- Model Evaluation
+6- HyperParamater Tuning
+7- UI & Backend Developement Using Flask
+8- Model Deployement "Facultatif"
