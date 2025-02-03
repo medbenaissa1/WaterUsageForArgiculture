@@ -22,11 +22,5 @@ class CustomException(Exception):
         return self.error_message
     
 
-if __name__ == "__main__":
-   
-    logging.info("Divide by zero")
-    a = 1 / 0
-    logging.info("Division by zero completed")
-   
 
 
