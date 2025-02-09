@@ -1,0 +1,16 @@
+[ 2025-02-08 01:24:14,210 ] 26 root - INFO - Début de l'ingestion des données
+[ 2025-02-08 01:24:14,238 ] 30 root - INFO - Lecture du dataset réussie
+[ 2025-02-08 01:24:14,353 ] 35 root - INFO - Division Train/Test
+[ 2025-02-08 01:24:14,358 ] 38 root - INFO - Division Train/Validation
+[ 2025-02-08 01:24:14,530 ] 45 root - INFO - Ingestion des données et séparation terminée
+[ 2025-02-08 01:24:14,572 ] 90 root - INFO - read test and train data...
+[ 2025-02-08 01:24:14,572 ] 91 root - INFO - Get Preprocessing Object
+[ 2025-02-08 01:24:14,572 ] 51 root - INFO - Numerical Columns Standard Scaling Done
+[ 2025-02-08 01:24:14,591 ] 60 root - INFO - Categorical Columns Encoding Done
+[ 2025-02-08 01:24:14,591 ] 68 root - INFO - preprocessiong.........
+[ 2025-02-08 01:24:14,595 ] 106 root - INFO - Applying preprocessing object on test and train dataframe....
+[ 2025-02-08 01:24:14,650 ] 123 root - INFO - Saving preprocessing object
+[ 2025-02-08 01:24:14,657 ] 34 root - INFO - Splitting training and test input data
+[ 2025-02-08 01:24:14,658 ] 38 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : Random Forest
+[ 2025-02-08 01:25:17,128 ] 38 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : Decision Tree
+[ 2025-02-08 01:25:22,154 ] 38 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : Gradient Boosting

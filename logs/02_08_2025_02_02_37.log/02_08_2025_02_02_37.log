@@ -1,0 +1,20 @@
+[ 2025-02-08 02:02:41,219 ] 26 root - INFO - Début de l'ingestion des données
+[ 2025-02-08 02:02:41,247 ] 30 root - INFO - Lecture du dataset réussie
+[ 2025-02-08 02:02:41,366 ] 35 root - INFO - Division Train/Test
+[ 2025-02-08 02:02:41,370 ] 38 root - INFO - Division Train/Validation
+[ 2025-02-08 02:02:41,512 ] 45 root - INFO - Ingestion des données et séparation terminée
+[ 2025-02-08 02:02:41,550 ] 90 root - INFO - read test and train data...
+[ 2025-02-08 02:02:41,551 ] 91 root - INFO - Get Preprocessing Object
+[ 2025-02-08 02:02:41,551 ] 51 root - INFO - Numerical Columns Standard Scaling Done
+[ 2025-02-08 02:02:41,569 ] 60 root - INFO - Categorical Columns Encoding Done
+[ 2025-02-08 02:02:41,569 ] 68 root - INFO - preprocessiong.........
+[ 2025-02-08 02:02:41,572 ] 106 root - INFO - Applying preprocessing object on test and train dataframe....
+[ 2025-02-08 02:02:41,623 ] 123 root - INFO - Saving preprocessing object
+[ 2025-02-08 02:02:41,631 ] 56 root - INFO - Splitting training and test input data
+[ 2025-02-08 02:02:41,632 ] 182 root - INFO - \U0001f50d Performing GridSearchCV for: Random Forest
+[ 2025-02-08 02:04:03,608 ] 182 root - INFO - \U0001f50d Performing GridSearchCV for: Decision Tree
+[ 2025-02-08 02:04:04,756 ] 182 root - INFO - \U0001f50d Performing GridSearchCV for: Gradient Boosting
+[ 2025-02-08 02:05:28,815 ] 182 root - INFO - \U0001f50d Performing GridSearchCV for: Linear Regression
+[ 2025-02-08 02:05:28,845 ] 182 root - INFO - \U0001f50d Performing GridSearchCV for: CatBoost Regressor
+[ 2025-02-08 02:06:21,480 ] 182 root - INFO - \U0001f50d Performing GridSearchCV for: AdaBoost Regressor
+[ 2025-02-08 02:06:29,536 ] 159 root - ERROR - Error in initiate_model_trainer: 'super' object has no attribute '__sklearn_tags__'

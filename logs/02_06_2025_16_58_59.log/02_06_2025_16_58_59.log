@@ -1,0 +1,3 @@
+[ 2025-02-06 16:58:59,957 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-02-06 16:58:59,967 ] 97 werkzeug - INFO -  * Debugger PIN: 122-302-517
+[ 2025-02-06 16:59:47,227 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\E15\\Desktop\\Workshop Project\\app.py', reloading

@@ -1,0 +1,21 @@
+[ 2025-02-07 23:51:35,573 ] 26 root - INFO - Début de l'ingestion des données
+[ 2025-02-07 23:51:35,602 ] 30 root - INFO - Lecture du dataset réussie
+[ 2025-02-07 23:51:35,721 ] 35 root - INFO - Division Train/Test
+[ 2025-02-07 23:51:35,725 ] 38 root - INFO - Division Train/Validation
+[ 2025-02-07 23:51:35,851 ] 45 root - INFO - Ingestion des données et séparation terminée
+[ 2025-02-07 23:51:35,889 ] 90 root - INFO - read test and train data...
+[ 2025-02-07 23:51:35,889 ] 91 root - INFO - Get Preprocessing Object
+[ 2025-02-07 23:51:35,889 ] 51 root - INFO - Numerical Columns Standard Scaling Done
+[ 2025-02-07 23:51:35,908 ] 60 root - INFO - Categorical Columns Encoding Done
+[ 2025-02-07 23:51:35,908 ] 68 root - INFO - preprocessiong.........
+[ 2025-02-07 23:51:35,911 ] 106 root - INFO - Applying preprocessing object on test and train dataframe....
+[ 2025-02-07 23:51:35,963 ] 123 root - INFO - Saving preprocessing object
+[ 2025-02-07 23:51:35,970 ] 34 root - INFO - Splitting training and test input data
+[ 2025-02-07 23:51:35,973 ] 88 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : Random Forest
+[ 2025-02-07 23:51:53,970 ] 88 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : Decision Tree
+[ 2025-02-07 23:51:54,671 ] 88 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : Gradient Boosting
+[ 2025-02-07 23:52:42,359 ] 88 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : Linear Regression
+[ 2025-02-07 23:52:42,393 ] 88 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : XGBRegressor
+[ 2025-02-07 23:52:42,548 ] 88 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : CatBoost Regressor
+[ 2025-02-07 23:52:44,968 ] 88 root - INFO - \U0001f50d Optimisation des hyperparamètres pour : AdaBoost Regressor
+[ 2025-02-07 23:52:55,034 ] 122 root - INFO - Best model found: CatBoost Regressor with R2 score: 0.9955828181976671

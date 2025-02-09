@@ -1,0 +1,21 @@
+[ 2025-02-08 02:17:48,134 ] 26 root - INFO - Début de l'ingestion des données
+[ 2025-02-08 02:17:48,153 ] 30 root - INFO - Lecture du dataset réussie
+[ 2025-02-08 02:17:48,231 ] 35 root - INFO - Division Train/Test
+[ 2025-02-08 02:17:48,233 ] 38 root - INFO - Division Train/Validation
+[ 2025-02-08 02:17:48,319 ] 45 root - INFO - Ingestion des données et séparation terminée
+[ 2025-02-08 02:17:48,347 ] 90 root - INFO - read test and train data...
+[ 2025-02-08 02:17:48,347 ] 91 root - INFO - Get Preprocessing Object
+[ 2025-02-08 02:17:48,347 ] 51 root - INFO - Numerical Columns Standard Scaling Done
+[ 2025-02-08 02:17:48,349 ] 60 root - INFO - Categorical Columns Encoding Done
+[ 2025-02-08 02:17:48,349 ] 68 root - INFO - preprocessiong.........
+[ 2025-02-08 02:17:48,351 ] 106 root - INFO - Applying preprocessing object on test and train dataframe....
+[ 2025-02-08 02:17:48,385 ] 123 root - INFO - Saving preprocessing object
+[ 2025-02-08 02:17:48,389 ] 56 root - INFO - Splitting training and test input data
+[ 2025-02-08 02:17:48,390 ] 159 root - INFO - \U0001f50d Performing GridSearchCV for: Random Forest
+[ 2025-02-08 02:19:06,899 ] 159 root - INFO - \U0001f50d Performing GridSearchCV for: Decision Tree
+[ 2025-02-08 02:19:07,896 ] 159 root - INFO - \U0001f50d Performing GridSearchCV for: Gradient Boosting
+[ 2025-02-08 02:20:28,641 ] 159 root - INFO - \U0001f50d Performing GridSearchCV for: Linear Regression
+[ 2025-02-08 02:20:28,669 ] 159 root - INFO - \U0001f50d Performing GridSearchCV for: CatBoost Regressor
+[ 2025-02-08 02:21:16,376 ] 159 root - INFO - \U0001f50d Performing GridSearchCV for: AdaBoost Regressor
+[ 2025-02-08 02:21:28,016 ] 122 root - INFO - Best model found: CatBoost Regressor with R2 score: 0.9915257013566687
+[ 2025-02-08 02:21:28,017 ] 136 root - ERROR - Error in initiate_model_trainer: There is no trained model to use predict(). Use fit() to train model. Then use this method.

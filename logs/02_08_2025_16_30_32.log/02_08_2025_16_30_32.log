@@ -1,0 +1,358 @@
+[ 2025-02-08 16:30:34,778 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+[ 2025-02-08 16:30:34,779 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-02-08 16:30:42,335 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:30:42] "GET / HTTP/1.1" 200 -
+[ 2025-02-08 16:30:49,194 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:30:49] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:08,994 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:08] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:09,987 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:09] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:41,617 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:41] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:42,144 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:42] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:42,320 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:42] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:42,479 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:42] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:42,641 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:42] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:42,808 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:42] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:48,618 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:48,623 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:48] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:51,809 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:51,812 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:51] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:52,240 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:52,242 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:52] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:52,424 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:52,427 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:52] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:52,591 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:52,595 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:52] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:52,927 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:52,930 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:52] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:53,112 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:53,114 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:54,528 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:54] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:55,359 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:55] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:55,544 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:55] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:31:56,938 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:56,941 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:56] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:57,192 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:57,195 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:57] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:57,264 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:57,266 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:57] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:57,432 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:57,435 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:57] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:31:57,560 ] 875 app - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 44, in index
+    city = request.form['city']
+           ~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\datastructures\structures.py", line 238, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 69, in index
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [44] error message[400 Bad Request: The browser (or proxy) sent a request that this server could not understand.]
+[ 2025-02-08 16:31:57,562 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:31:57] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[ 2025-02-08 16:32:00,144 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:32:00] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:32:00,320 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:32:00] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:32:00,479 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:32:00] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:32:00,664 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:32:00] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -

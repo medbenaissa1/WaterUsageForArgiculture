@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation Water Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #00b4db, #0083b0); /* Water flow gradient */
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            width: 100%;
+        }
+        h2 {
+            color: #039be5;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        .form-icon {
+            color: #039be5;
+            font-size: 1.5rem;
+        }
+        button.btn-primary {
+            background-color: #039be5;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        button.btn-primary:hover {
+            background-color: #0277bd;
+            transform: scale(1.05);
+        }
+        .input-group-text {
+            background-color: #e3f2fd;
+            border: none;
+        }
+        .form-control:focus {
+            border-color: #039be5;
+            box-shadow: 0 0 5px rgba(3, 155, 229, 0.5);
+        }
+        .alert {
+            background-color: #e8f5e9;
+            color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Daily Irrigation Water Prediction</h2>
+        <form action="/" method="POST">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="soil_type">Soil Type:</label>
+                    <select name="soil_type" class="form-control" required>
+                        <option value="">Select Soil Type</option>
+                        <option value="Silty" {% if soil_type == "Silty" %}selected{% endif %}>Silty</option>
+                        <option value="Clay" {% if soil_type == "Clay" %}selected{% endif %}>Clay</option>
+                        <option value="Loam" {% if soil_type == "Loam" %}selected{% endif %}>Loam</option>
+                        <option value="Sandy" {% if soil_type == "Sandy" %}selected{% endif %}>Sandy</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="terrain_type">Terrain Type:</label>
+                    <select name="terrain_type" class="form-control" required>
+                        <option value="">Select Terrain Type</option>
+                        <option value="Coastal Plain" {% if terrain_type == "Coastal Plain" %}selected{% endif %}>Coastal Plain</option>
+                        <option value="Valley" {% if terrain_type == "Valley" %}selected{% endif %}>Valley</option>
+                        <option value="Mountain" {% if terrain_type == "Mountain" %}selected{% endif %}>Mountain</option>
+                        <option value="Plateau" {% if terrain_type == "Plateau" %}selected{% endif %}>Plateau</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="crop_type">Crop Type:</label>
+                    <select name="crop_type" class="form-control" required>
+                        <option value="">Select Crop Type</option>
+                        <option value="Tomatoes" {% if crop_type == "Tomatoes" %}selected{% endif %}>Tomatoes</option>
+                        <option value="Dates" {% if crop_type == "Dates" %}selected{% endif %}>Dates</option>
+                        <option value="Almonds" {% if crop_type == "Almonds" %}selected{% endif %}>Almonds</option>
+                        <option value="Wheat" {% if crop_type == "Wheat" %}selected{% endif %}>Wheat</option>
+                        <option value="Citrus" {% if crop_type == "Citrus" %}selected{% endif %}>Citrus</option>
+                        <option value="Barley" {% if crop_type == "Barley" %}selected{% endif %}>Barley</option>
+                        <option value="Olive" {% if crop_type == "Olive" %}selected{% endif %}>Olive</option>
+                        <option value="Grapes" {% if crop_type == "Grapes" %}selected{% endif %}>Grapes</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="water_availability">Water Availability:</label>
+                    <select name="water_availability" class="form-control" required>
+                        <option value="">Select Water Availability</option>
+                        <option value="Low" {% if water_availability == "Low" %}selected{% endif %}>Low</option>
+                        <option value="Medium" {% if water_availability == "Medium" %}selected{% endif %}>Medium</option>
+                        <option value="High" {% if water_availability == "High" %}selected{% endif %}>High</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="humidity">Humidity (%):</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-cloud form-icon"></i></span>
+                        <input type="number" step="any" name="humidity" class="form-control" value="{{ humidity }}" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="temperature">Temperature (°C):</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-thermometer-half form-icon"></i></span>
+                        <input type="number" step="any" name="temperature" class="form-control" value="{{ temperature }}" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="rainfall">Rainfall (mm):</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-cloud-rain form-icon"></i></span>
+                        <input type="number" step="any" name="rainfall" class="form-control" value="{{ rainfall }}" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="wind_speed">Wind Speed (km/h):</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-wind form-icon"></i></span>
+                        <input type="number" step="any" name="wind_speed" class="form-control" value="{{ wind_speed }}" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="sunlight_hours">Sunlight Hours:</label>
+                    <input type="number" step="any" name="sunlight_hours" class="form-control" value="{{ sunlight_hours }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="soil_moisture">Soil Moisture (%):</label>
+                    <input type="number" step="any" name="soil_moisture" class="form-control" value="{{ soil_moisture }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="evapotranspiration">Evapotranspiration (mm/day):</label>
+                    <input type="number" step="any" name="evapotranspiration" class="form-control" value="{{ evapotranspiration }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="irrigation_frequency">Irrigation Frequency (days):</label>
+                    <input type="number" step="any" name="irrigation_frequency" class="form-control" value="{{ irrigation_frequency }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="rainfall_forecast">Rainfall Forecast (mm):</label>
+                    <input type="number" step="any" name="rainfall_forecast" class="form-control" value="{{ rainfall_forecast }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="vegetation_index">Vegetation Index:</label>
+                    <input type="number" step="any" name="vegetation_index" class="form-control" value="{{ vegetation_index }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="distance_to_water_source">Distance to Water Source (km):</label>
+                    <input type="number" step="any" name="distance_to_water_source" class="form-control" value="{{ distance_to_water_source }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="irrigation_system_type">Irrigation System Type:</label>
+                    <select name="irrigation_system_type" class="form-control" required>
+                        <option value="">Select Your Irrigation System Type</option>
+                        <option value="Drip" {% if irrigation_system_type == "Drip" %}selected{% endif %}>Drip</option>
+                        <option value="Sprinkler" {% if irrigation_system_type == "Sprinkler" %}selected{% endif %}>Sprinkler</option>
+                        <option value="Subsurface" {% if irrigation_system_type == "Subsurface" %}selected{% endif %}>Subsurface</option>
+                        <option value="Surface" {% if irrigation_system_type == "Surface" %}selected{% endif %}>Surface</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Predict</button>
+        </form>
+        {% if prediction is not none %}
+        <div id="prediction-result" class="alert alert-success mt-4">
+            Predicted Daily Irrigation Water: {{ prediction }} m³
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

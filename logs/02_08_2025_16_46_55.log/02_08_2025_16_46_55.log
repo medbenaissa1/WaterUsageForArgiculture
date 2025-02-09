@@ -1,0 +1,19 @@
+[ 2025-02-08 16:46:59,141 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+[ 2025-02-08 16:46:59,141 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-02-08 16:47:04,479 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:04] "GET / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:15,234 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:15] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:47:25,503 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:25] "[31m[1mPOST /get_weather HTTP/1.1[0m" 415 -
+[ 2025-02-08 16:47:32,222 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:32] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:33,340 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:33] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:33,584 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:33] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:33,828 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:33] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:34,060 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:34] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:34,298 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:34] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:34,517 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:34] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:34,746 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:34] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:34,977 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:34] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:35,212 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:35] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 16:47:35,445 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:47:35] "POST / HTTP/1.1" 200 -

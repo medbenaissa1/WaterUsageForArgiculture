@@ -1,0 +1,14 @@
+[ 2025-02-08 02:27:32,302 ] 26 root - INFO - Début de l'ingestion des données
+[ 2025-02-08 02:27:32,331 ] 30 root - INFO - Lecture du dataset réussie
+[ 2025-02-08 02:27:32,402 ] 35 root - INFO - Division Train/Test
+[ 2025-02-08 02:27:32,404 ] 38 root - INFO - Division Train/Validation
+[ 2025-02-08 02:27:32,477 ] 45 root - INFO - Ingestion des données et séparation terminée
+[ 2025-02-08 02:27:32,503 ] 90 root - INFO - read test and train data...
+[ 2025-02-08 02:27:32,503 ] 91 root - INFO - Get Preprocessing Object
+[ 2025-02-08 02:27:32,503 ] 51 root - INFO - Numerical Columns Standard Scaling Done
+[ 2025-02-08 02:27:32,505 ] 60 root - INFO - Categorical Columns Encoding Done
+[ 2025-02-08 02:27:32,505 ] 68 root - INFO - preprocessiong.........
+[ 2025-02-08 02:27:32,508 ] 106 root - INFO - Applying preprocessing object on test and train dataframe....
+[ 2025-02-08 02:27:32,543 ] 123 root - INFO - Saving preprocessing object
+[ 2025-02-08 02:27:32,548 ] 32 root - INFO - Splitting training and test input data
+[ 2025-02-08 02:27:32,549 ] 109 root - INFO - \U0001f50d Performing GridSearchCV for: Random Forest

@@ -1,0 +1,20 @@
+[ 2025-02-08 17:04:11,218 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+[ 2025-02-08 17:04:11,218 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-02-08 17:04:16,334 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 17:04:16] "GET / HTTP/1.1" 200 -
+[ 2025-02-08 17:04:19,795 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 17:04:19] "[33mPOST /get_weather HTTP/1.1[0m" 404 -
+[ 2025-02-08 17:04:23,917 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 17:04:23] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 17:04:25,848 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 17:04:25] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:22,827 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:22] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:23,559 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:23] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:23,817 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:23] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:24,042 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:24] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:24,481 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:24] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:24,735 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:24] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:24,943 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:24] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:25,299 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:25] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:25,516 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:25] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:25,741 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:25] "POST / HTTP/1.1" 200 -
+[ 2025-02-08 20:47:40,225 ] 97 werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:47:40] "POST / HTTP/1.1" 200 -

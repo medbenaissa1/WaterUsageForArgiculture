@@ -1,0 +1,33 @@
+[ 2025-02-08 02:31:19,452 ] 26 root - INFO - Début de l'ingestion des données
+[ 2025-02-08 02:31:19,470 ] 30 root - INFO - Lecture du dataset réussie
+[ 2025-02-08 02:31:19,538 ] 35 root - INFO - Division Train/Test
+[ 2025-02-08 02:31:19,540 ] 38 root - INFO - Division Train/Validation
+[ 2025-02-08 02:31:19,611 ] 45 root - INFO - Ingestion des données et séparation terminée
+[ 2025-02-08 02:31:19,635 ] 90 root - INFO - read test and train data...
+[ 2025-02-08 02:31:19,635 ] 91 root - INFO - Get Preprocessing Object
+[ 2025-02-08 02:31:19,636 ] 51 root - INFO - Numerical Columns Standard Scaling Done
+[ 2025-02-08 02:31:19,636 ] 60 root - INFO - Categorical Columns Encoding Done
+[ 2025-02-08 02:31:19,636 ] 68 root - INFO - preprocessiong.........
+[ 2025-02-08 02:31:19,638 ] 106 root - INFO - Applying preprocessing object on test and train dataframe....
+[ 2025-02-08 02:31:19,669 ] 123 root - INFO - Saving preprocessing object
+[ 2025-02-08 02:31:19,674 ] 32 root - INFO - Splitting training and test input data
+[ 2025-02-08 02:31:19,674 ] 113 root - INFO - \U0001f50d Performing GridSearchCV for: Random Forest
+[ 2025-02-08 02:32:37,136 ] 132 root - INFO - Cross-validation R2 scores for Random Forest: [0.97858449 0.97885537 0.97745227]
+[ 2025-02-08 02:32:37,158 ] 137 root - INFO - R2 score for Random Forest: 0.9866022767743741
+[ 2025-02-08 02:32:37,158 ] 113 root - INFO - \U0001f50d Performing GridSearchCV for: Decision Tree
+[ 2025-02-08 02:32:38,181 ] 132 root - INFO - Cross-validation R2 scores for Decision Tree: [0.94744154 0.9465415  0.95003135]
+[ 2025-02-08 02:32:38,182 ] 137 root - INFO - R2 score for Decision Tree: 0.9589378180669573
+[ 2025-02-08 02:32:38,183 ] 113 root - INFO - \U0001f50d Performing GridSearchCV for: Gradient Boosting
+[ 2025-02-08 02:34:01,160 ] 132 root - INFO - Cross-validation R2 scores for Gradient Boosting: [0.98921483 0.9860648  0.98864452]
+[ 2025-02-08 02:34:01,164 ] 137 root - INFO - R2 score for Gradient Boosting: 0.9911943318707013
+[ 2025-02-08 02:34:01,164 ] 113 root - INFO - \U0001f50d Performing GridSearchCV for: Linear Regression
+[ 2025-02-08 02:34:01,186 ] 132 root - INFO - Cross-validation R2 scores for Linear Regression: [0.73957482 0.70384554 0.73263586]
+[ 2025-02-08 02:34:01,187 ] 137 root - INFO - R2 score for Linear Regression: 0.7132838721880079
+[ 2025-02-08 02:34:01,187 ] 113 root - INFO - \U0001f50d Performing GridSearchCV for: CatBoost Regressor
+[ 2025-02-08 02:34:53,755 ] 132 root - INFO - Cross-validation R2 scores for CatBoost Regressor: [0.98832518 0.98760595 0.98922571]
+[ 2025-02-08 02:34:53,768 ] 137 root - INFO - R2 score for CatBoost Regressor: 0.9917949193891579
+[ 2025-02-08 02:34:53,768 ] 113 root - INFO - \U0001f50d Performing GridSearchCV for: AdaBoost Regressor
+[ 2025-02-08 02:35:04,377 ] 132 root - INFO - Cross-validation R2 scores for AdaBoost Regressor: [0.87311459 0.87091586 0.87825367]
+[ 2025-02-08 02:35:04,405 ] 137 root - INFO - R2 score for AdaBoost Regressor: 0.8743972753793194
+[ 2025-02-08 02:35:04,406 ] 90 root - INFO - Best model found: CatBoost Regressor with R2 score: 0.9917949193891579
+[ 2025-02-08 02:35:04,406 ] 93 root - INFO - Training the best model on the full training set

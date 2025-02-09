@@ -1,0 +1,40 @@
+[ 2025-02-09 19:28:46,780 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+[ 2025-02-09 19:28:46,781 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-02-09 19:28:51,291 ] 875 app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 43, in index
+    return render_template('index.html', prediction=None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\E15\Desktop\Workshop Project\templates\index.html", line 75, in top-level template code
+    <option value="" {% if not form_data.soil_type %}selected{% endif %}>Select Soil Type</option>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'form_data' is undefined
+[ 2025-02-09 19:28:51,297 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 19:28:51] "[35m[1mGET / HTTP/1.1[0m" 500 -

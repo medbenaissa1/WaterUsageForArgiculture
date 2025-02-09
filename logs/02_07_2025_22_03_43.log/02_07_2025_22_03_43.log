@@ -1,0 +1,5 @@
+[ 2025-02-07 22:03:48,573 ] 26 root - INFO - Début de l'ingestion des données
+[ 2025-02-07 22:03:48,582 ] 30 root - INFO - Lecture du dataset réussie
+[ 2025-02-07 22:03:48,593 ] 35 root - INFO - Division Train/Test
+[ 2025-02-07 22:03:48,596 ] 38 root - INFO - Division Train/Validation
+[ 2025-02-07 22:03:48,609 ] 45 root - INFO - Ingestion des données et séparation terminée

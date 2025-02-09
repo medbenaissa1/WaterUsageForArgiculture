@@ -1,0 +1,77 @@
+[ 2025-02-09 15:55:25,540 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+[ 2025-02-09 15:55:25,540 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-02-09 15:55:45,446 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:55:45] "[32mGET / HTTP/1.1[0m" 302 -
+[ 2025-02-09 15:55:45,484 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:55:45] "GET /login?next=/ HTTP/1.1" 200 -
+[ 2025-02-09 15:55:47,595 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:55:47] "GET /register HTTP/1.1" 200 -
+[ 2025-02-09 15:55:52,224 ] 875 app - ERROR - Exception on /register [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 88, in register
+    user = User.query.filter_by(username=username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2754, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.password AS user_password 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('med', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[ 2025-02-09 15:55:52,232 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:55:52] "[35m[1mPOST /register HTTP/1.1[0m" 500 -

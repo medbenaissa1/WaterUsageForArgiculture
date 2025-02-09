@@ -1,0 +1,78 @@
+[ 2025-02-06 23:29:38,266 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+[ 2025-02-06 23:29:38,266 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-02-06 23:29:43,293 ] 97 werkzeug - INFO - 192.168.1.17 - - [06/Feb/2025 23:29:43] "GET / HTTP/1.1" 200 -
+[ 2025-02-06 23:29:44,500 ] 97 werkzeug - INFO - 192.168.1.17 - - [06/Feb/2025 23:29:44] "GET /home HTTP/1.1" 200 -
+[ 2025-02-06 23:29:58,677 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\src\pipeline\predict_pipeline.py", line 17, in predict
+    data_scaled = preprocessor.transform(features)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1101, in transform
+    Xs = self._call_func_on_transformers(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 910, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\utils\parallel.py", line 77, in __call__
+    return super().__call__(iterable_with_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\joblib\parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\joblib\parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\utils\parallel.py", line 139, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\pipeline.py", line 1531, in _transform_one
+    res = transformer.transform(X, **params.transform)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\pipeline.py", line 1092, in transform
+    Xt = transform.transform(Xt, **routed_params[name].transform)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 1043, in transform
+    X_int, X_mask = self._transform(
+                    ^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 218, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['Flat'] in column 1 during transform
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 59, in predict_datapoint
+    results = predict_pipeline.predict(pred_df)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\src\pipeline\predict_pipeline.py", line 22, in predict
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\src\pipeline\predict_pipeline.py] line number [17] error message[Found unknown categories ['Flat'] in column 1 during transform]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 63, in predict_datapoint
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\app.py] line number [59] error message[Error occurred in python script name [C:\Users\E15\Desktop\Workshop Project\src\pipeline\predict_pipeline.py] line number [17] error message[Found unknown categories ['Flat'] in column 1 during transform]]
+[ 2025-02-06 23:29:58,687 ] 97 werkzeug - INFO - 192.168.1.17 - - [06/Feb/2025 23:29:58] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

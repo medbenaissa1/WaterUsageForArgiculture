@@ -1,0 +1,15 @@
+[ 2025-02-06 03:11:35,541 ] 28 root - INFO - Started Data Ingestion
+[ 2025-02-06 03:11:35,570 ] 31 root - INFO - Read the dataset
+[ 2025-02-06 03:11:35,683 ] 36 root - INFO - Train Test Split Initiated
+[ 2025-02-06 03:11:35,798 ] 43 root - INFO - Data Ingestion Is Completed
+[ 2025-02-06 03:11:35,832 ] 89 root - INFO - read test and train data...
+[ 2025-02-06 03:11:35,833 ] 90 root - INFO - Get Preprocessing Object
+[ 2025-02-06 03:11:35,833 ] 51 root - INFO - Numerical Columns Standard Scaling Done
+[ 2025-02-06 03:11:35,833 ] 60 root - INFO - Categorical Columns Encoding Done
+[ 2025-02-06 03:11:35,851 ] 68 root - INFO - preprocessiong.........
+[ 2025-02-06 03:11:35,853 ] 102 root - INFO - Applying preprocessing object on test and train dataframe....
+[ 2025-02-06 03:11:35,904 ] 114 root - INFO - Saving preprocessing object
+[ 2025-02-06 03:11:35,911 ] 36 root - INFO - Splitting training and test data
+[ 2025-02-06 03:11:35,911 ] 59 root - INFO - Performing Hyperparameter Tuning for Random Forest
+[ 2025-02-06 03:12:13,573 ] 59 root - INFO - Performing Hyperparameter Tuning for Gradient Boosting
+[ 2025-02-06 03:12:23,468 ] 59 root - INFO - Performing Hyperparameter Tuning for XGBoost

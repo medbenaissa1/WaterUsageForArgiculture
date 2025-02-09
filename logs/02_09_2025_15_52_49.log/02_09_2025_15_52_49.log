@@ -1,0 +1,32 @@
+[ 2025-02-09 15:52:51,441 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.17:5000
+[ 2025-02-09 15:52:51,441 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-02-09 15:52:54,670 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:52:54] "[32mGET / HTTP/1.1[0m" 302 -
+[ 2025-02-09 15:52:54,708 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:52:54] "GET /login?next=/ HTTP/1.1" 200 -
+[ 2025-02-09 15:52:57,597 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:52:57] "GET /register HTTP/1.1" 200 -
+[ 2025-02-09 15:53:03,332 ] 875 app - ERROR - Exception on /register [POST]
+Traceback (most recent call last):
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\app.py", line 85, in register
+    password = generate_password_hash(request.form['password'], method='sha256')  # Secure password hashing
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\security.py", line 108, in generate_password_hash
+    h, actual_method = _hash_internal(method, salt, password)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\E15\Desktop\Workshop Project\venv\Lib\site-packages\werkzeug\security.py", line 70, in _hash_internal
+    raise ValueError(f"Invalid hash method '{method}'.")
+ValueError: Invalid hash method 'sha256'.
+[ 2025-02-09 15:53:03,334 ] 97 werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 15:53:03] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
